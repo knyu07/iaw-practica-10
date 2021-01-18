@@ -67,8 +67,8 @@ wp plugin update -all --allow-root
 wp theme update --all -allow-root
 
 #Instalar y activar plugin
-wp plugin install --path=/var/www/html/ Builder --activate --allow-root
+wp plugin install --path=/var/www/html/ contact-form-7 --activate --allow-root
 
 #Activar tema
-wp theme install --path=/var/www/html/ Optimize – SEO --activate --allow-root
+sudo wp theme install --path=/var/www/html/ oceanwp --activate --allow-root
 
