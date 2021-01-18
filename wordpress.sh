@@ -68,6 +68,7 @@ wp theme update --all -allow-root
 
 #Instalar y activar plugin
 wp plugin install --path=/var/www/html/ contact-form-7 --activate --allow-root
+wp plugin install --path=/var/www/html/ jetpack --activate --allow-root
 
 #Activar tema
 sudo wp theme install --path=/var/www/html/ oceanwp --activate --allow-root
