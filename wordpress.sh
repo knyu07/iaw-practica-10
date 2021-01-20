@@ -50,7 +50,7 @@ mysql -u root <<< "FLUSH PRIVILEGES;"
 wp config create --dbname=$DB_NAME --dbuser=$DB_USER --dbpass=$DB_PASSWORD --allow-root
 
 #Instalamos Wordpress
-wp core install --url=http://52.90.236.45 --title="IAW" --admin_user=admin --admin_password=admin --admin_email=admin@admin.com --allow-root
+wp core install --url=http://3.80.141.180 --title="IAW" --admin_user=admin --admin_password=admin --admin_email=admin@admin.com --allow-root
 
 #Eliminamos el index.html 
 cd /var/www/html
@@ -61,15 +61,15 @@ systemctl restart apache2.service
 
 ----------------- PERSONALIZAR WORDPRESS ---------------------
 # Actualizamos los plugins
-wp plugin update -all --allow-root
+wp plugin update  --path=/var/www/html/ --all --allow-root
 
 #Actualizamos los temas
-wp theme update --all -allow-root
+wp theme update --path=/var/www/html/ --all --allow-root
 
 #Instalar y activar plugin
 wp plugin install --path=/var/www/html/ contact-form-7 --activate --allow-root
 wp plugin install --path=/var/www/html/ jetpack --activate --allow-root
 
 #Activar tema
-sudo wp theme install --path=/var/www/html/ oceanwp --activate --allow-root
+wp theme install --path=/var/www/html/ oceanwp --activate --allow-root
 
