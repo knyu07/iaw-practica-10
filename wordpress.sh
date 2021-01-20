@@ -72,4 +72,4 @@ wp plugin install --path=/var/www/html/ jetpack --activate --allow-root
 
 #Activar tema
 wp theme install --path=/var/www/html/ oceanwp --activate --allow-root
-
+wp theme activate oceanwp --path=/var/www/html/ --allow-root
